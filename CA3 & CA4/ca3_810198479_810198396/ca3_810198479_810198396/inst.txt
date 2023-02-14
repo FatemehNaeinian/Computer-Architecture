@@ -1,0 +1,16 @@
+add R1,R0,1000		
+1	add R3,R0,1		
+2	add R5,R0,1008   	
+3	add R6,R0,0		
+4	lw R10,0(R1)		
+5	add R1,R1,1		
+6	add R6,R6,1		
+7	lw R2,0(R1)		
+8	CMP R2,R10		
+9    11 B 2                     
+10	add R10,R2,0		
+11	add R11,R6,0		
+12	CMP R5,R1		
+13   11	B -9			
+14	sw R10,2000(R0)		
+15	sw R11,2004(R0)
